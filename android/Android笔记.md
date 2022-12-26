@@ -1636,6 +1636,70 @@ class MyFragment extends Fragment{
 
 
 
+## 4.7 动画
+
+
+
+### 4.7.1 逐帧动画
+
+// 等待补充...
+
+
+
+### 4.8.2 补间动画
+
+创建动画资源在：../res/anim/name_anim.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="600"> <!-- 动画时间 -->
+    <alpha/><!-- 透明 -->
+	<scale/> <!-- 缩放 -->
+	<translate/><!-- 位移 -->
+	<rotate/><!-- 旋转 -->
+</set>
+```
+
+
+
+使用动画
+
+```java
+// 设置动画的view对象
+RobotView robotView = findViewById(R.id.id_robot);
+// 加载动画资源
+Animation animIn = AnimationUtils.loadAnimation(this, R.anim.scale_anim_in);
+Animation animOut = AnimationUtils.loadAnimation(this, R.anim.scale_anim_out);
+
+// 给view对象设置进入时的动画
+robotView.startAnimation(animIn);
+
+// 保持动画结束时的状态
+animOut.setFillAfter(true);
+// 给view对象设置退出时的动画
+robotView.startAnimation(animOut);
+
+// 监听动画的各个状态
+animOut.setAnimationListener(new Animation.AnimationListener() {
+	@Override
+	public void onAnimationStart(Animation animation) {
+
+	}
+
+	@Override
+	public void onAnimationEnd(Animation animation) {
+		IntroActivity.actionStart(MainActivity.this);
+    }
+
+	@Override
+	public void onAnimationRepeat(Animation animation) {
+	}
+});
+```
+
+
+
 # 参考文件
 
 （1）郭霖. 第一行代码 Android 第二版，人民邮电出版社，2016.12
