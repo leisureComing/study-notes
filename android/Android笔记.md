@@ -1331,6 +1331,20 @@ public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
 ## 4.3 控件
 
+### 4.3.1 TextView
+
+TextView它主要用于在界面上显示一段文本信息。
+
+```xml
+<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/android"
+	android:textSize="@dimen/font_80"
+    android:textColor="#FF00FF00"
+    android:gravity="center"/>
+```
+
 
 
 ## 4.4 自定义控件
