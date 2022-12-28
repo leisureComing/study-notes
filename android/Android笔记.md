@@ -1337,12 +1337,21 @@ TextView它主要用于在界面上显示一段文本信息。
 
 ```xml
 <TextView
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:text="@string/android"
-	android:textSize="@dimen/font_80"
-    android:textColor="#FF00FF00"
-    android:gravity="center"/>
+	android:layout_width="wrap_content"//宽度
+	android:layout_height="wrap_content"//高度
+	android:text="@string/android"//文本内容
+	android:textSize="@dimen/font_80"//字体大小
+    android:textColor="@color/android_green"//设置文字颜色
+    android:background="#FF0000FF" //控件的背景颜色，填充整个控件的颜色，可以是图片
+    android:gravity="center"//设置控件中内容的对齐方向
+    android:shadowColor="@color/android_green"//设置阴影颜色
+    android:shadowRadius="@integer/shadow_radius_10"//设置阴影的范围
+ 	android:shadowDx="@integer/shadow_dx_10"//阴影的水平偏移量
+	android:shadowDy="@integer/shadow_dy_10"//阴影的垂直偏移量
+    android:textStyle="bold"//设置文字风格normal，bold，italic（斜体）
+    android:textFontWeight="@integer/font_weight_800"//字体加粗
+    android:fontFamily="serif"//字体样式
+    android:typeface="normal"//字体格式normal,sans,serif,monospace />
 ```
 
 
