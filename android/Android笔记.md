@@ -1356,6 +1356,53 @@ TextView它主要用于在界面上显示一段文本信息。
 
 
 
+### 4.3.2 Button
+
+Button按钮是程序用于和用户进行交互的一个重要控件。
+
+```xml
+<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="@string/android"
+	android:textAllCaps="false" //所有英文自动进行大写转换
+	android:clickable="false" //按钮是否允许点击/>
+```
+
+
+
+点击事件代码
+
+```java
+// 匿名类的方式
+Button button = findViewById(R.id.id_bt);
+button.setOnClickListener(new View.OnClickListener(){
+	@Override
+	public void onClick(View view) {
+	}
+});
+```
+
+```java
+// 实现接口的方式
+public class ViewActivity extends ActionBarActivity implements View.OnClickListener{
+	// ...
+    // 其他代码
+    // ...
+    
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.id_bt:
+                // 在此处添加逻辑
+                break;
+        }
+    }
+}
+```
+
+
+
 ## 4.4 自定义控件
 
 ​                   
