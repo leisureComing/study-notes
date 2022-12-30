@@ -1403,6 +1403,47 @@ public class ViewActivity extends ActionBarActivity implements View.OnClickListe
 
 
 
+### 4.3.3 EditText
+
+EditText允许用户在控件里输入和编辑内容，并可以在程序中对这些内容进行处理。
+
+```xml
+<EditText
+	android:id="@+id/id_et"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:hint="@string/hint"//提示
+	android:maxLines="1"//最大行数
+	android:maxLength="8"//允许输入的字符最大长度
+	android:inputType="number"//输入类型
+	android:enabled="true"//是否可编辑/>
+```
+
+
+
+文本监听
+
+```java
+et.addTextChangedListener(new TextWatcher() {
+	@Override
+	public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+		//文本改变前
+	}
+　　
+	@Override
+	public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+		//文本改变时
+	}
+
+	@Override
+	public void afterTextChanged(Editable editable) {
+		//文本改变后，一般使用此方法
+	}
+});
+```
+
+
+
 ## 4.4 自定义控件
 
 ​                   
