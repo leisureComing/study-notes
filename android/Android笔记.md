@@ -1444,6 +1444,29 @@ et.addTextChangedListener(new TextWatcher() {
 
 
 
+### 4.3.4 ImageView
+
+ImageView用于在界面上展示图片的一个控件。
+
+```xml
+<ImageView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:src="@drawable/ic_launcher_foreground" // 显示图片/>
+```
+
+
+
+java显示图片
+
+```java
+ImageView imageView = findViewById(R.id.image_view);
+// 显示图片
+imageView.setImageResource(R.drawable.image);
+```
+
+
+
 ## 4.4 自定义控件
 
 ​                   
