@@ -1,0 +1,27 @@
+{
+    "name": "test",
+    "version": "0.0.1",
+    "description": "test",
+    "scripts":{
+      "start": "node app.js",
+      "test": "mocha -r intelli-espower-loader -t 20000 test",
+      "precommit": "lint-staged"    
+    },
+    "lint-staged": {
+      "*.js": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "keywords": [
+      "node",
+      "shop"
+    ],
+    "author": "Leisure",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.16.3",
+      "request": "^2.85.0"
+    }
+  }
+  
